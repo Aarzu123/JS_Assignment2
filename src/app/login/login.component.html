@@ -1,0 +1,22 @@
+<div class="login-container">    
+
+    <form class="login-form" [formGroup]="loginForm" (submit)="loginSubmit()">
+
+        <mat-form-field class="username">
+          <mat-label>Username</mat-label>
+          
+          <input matInput name="username" placeholder="username" formControlName="username" >
+        
+        </mat-form-field>
+      
+        <mat-form-field class="password">
+          <mat-label>Password</mat-label>
+          
+          <input matInput type="password" placeholder="password" formControlName="password" >
+        
+        </mat-form-field>
+        
+        <button type="submit" mat-button class="btn btn-primary">Submit</button>
+        <strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>
+    </form>
+</div>    
